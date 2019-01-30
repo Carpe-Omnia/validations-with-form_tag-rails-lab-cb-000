@@ -6,13 +6,15 @@ class AuthorsController < ApplicationController
   def new
     @author = Author.new
   end
-
+  def edit
+  end
   def create
     @author = Author.create(author_params)
 
     redirect_to author_path(@author)
   end
-
+  def update
+  end
   private
 
   def author_params
