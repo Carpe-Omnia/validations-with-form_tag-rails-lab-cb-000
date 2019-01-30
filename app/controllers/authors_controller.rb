@@ -19,8 +19,18 @@ class AuthorsController < ApplicationController
     end
   end
   def update
+    @author = author.find(params[:id])
+    @author.phone_number = params[:phone_number]
+    @author.name = params[:name]
+    @author.email = params[:email]
+    if @author.valid?
+      @author.update(author_params)
+      redirect_to author_path(@author)
+    else
+      render :edit
+    end
   end
-  
+
   private
 
   def author_params
