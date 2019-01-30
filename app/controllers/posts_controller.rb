@@ -30,7 +30,7 @@ class PostsController < ApplicationController
       @post.update(post_params)
       redirect_to post_path(@post)
     else
-      render :edut
+      render :edit
     end
   end
 
