@@ -3,10 +3,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def new 
-  end 
-  def create 
-  end     
+  def new
+  end
+  def create
+  end
   def edit
     @post = Post.find(params[:id])
   end
